@@ -1,0 +1,371 @@
+ <html>
+<head>
+  <title>Registeration Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+
+  
+  <style>
+   .login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 10px;
+            margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+  .hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  h3 {
+    text-align: center;
+    line-height: 300%;
+  }
+  .row-one {
+  height: 100px; 
+  padding:25px;
+  background-color: #EBFFF9;
+}
+.row-two {
+  height: 700px;
+  background-color: #F7F3FF;
+  
+}
+.container{
+border: 10px solid black;
+
+}
+
+
+fieldset {
+    border: thin solid #ccc; 
+    border-radius: 4px;
+    padding: 20px;
+    padding-left: 40px;
+    
+}
+legend {
+   color: #678;
+}
+.form-control {
+    width: 95%;
+}
+
+span.req {
+    color:maroon;
+    font-size: 112%;
+}
+  </style>
+ </head>
+ <body>
+   
+   <div class="container">
+
+    <div class="main">
+    <div class="header">
+	
+      <h3>User Registration</h3>
+	  
+	 </div>
+      <div class="row row-one">
+		
+		<form id="loginForm" class="form-inline">
+		<div class="form-group col-sm-3">
+          <label class=" control-label">Already registered???</label>
+        </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label" for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+	  <div class=" col-sm-4 messageContainer"></div>
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label" for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+	  <div class="col-sm-4 messageContainer"></div>
+    </div>
+	 <div class="form-group col-sm-1">
+    <button type="submit" class="btn btn-default">Submit</button>
+	</div>
+  </form>
+      </div>
+	  
+      <div class="login-or">
+        <hr class="hr-or">
+        <span class="span-or">or</span>
+      </div>
+	  
+	  <div class="row row-two">
+	    
+		<form action="" method="post" id="registerForm" role="form" class="form-horizontal">
+            <fieldset><legend class="text-center">Register for new users . <span class="req"><small> required *</small></span></legend>
+            <div class="col-sm-6">
+			<div class="form-group col-sm-6">
+            <label for="regMemb"> Register As:<span class="req">* </span> </label>
+                    <select class="selectpicker" name="regMemb" required>
+					   <option value="" selected disabled >Select your membership type</option>
+                       <option value="$2">Premium Membership</option>
+                       <option value="$23">Platinum Membership</option>
+                       <option value="$0">Free</option>
+                    </select>
+					<div class=" col-sm-4 messageContainer"></div>
+					</div>
+			</div>
+			<div class="col-sm-12">
+			<div class="form-group col-sm-6">
+                <label for="email"> Email Address: <span class="req">* </span></label> 
+                    <input class="form-control" required type="text" name="email" id = "email" placeholder="enter valid email ...." />   
+                        
+						<div class=" col-sm-4 messageContainer"></div>
+            </div>
+			</div>
+			<div class="col-sm-12">
+			<div class="form-group">
+			<div class="col-sm-4">
+                <label for="password"> Password: <span class="req">* </span></label>
+                    <input required name="password" type="password" class="form-control " minlength="4" maxlength="16"   /> </p>
+			<div class="  messageContainer"></div>
+			</div>
+			<div class="col-sm-4">
+                <label for="password">Confirm Password : <span class="req">* </span></label>
+                    <input required name="confirmPassword" type="password" class="form-control " minlength="4" maxlength="16" placeholder="Enter again to validate"  />
+                   <div class=" col-sm-4 messageContainer"></div>     
+            </div>
+			</div>
+			</div>
+			
+			<div class="col-sm-12">
+			<div class="form-group"> 
+			<label for="firstname"> Full name: <span class="req">* </span></label>
+			<div class="col-sm-12">
+			
+            <div class="col-sm-4">
+                
+                    <input class="form-control" type="text" name="firstname" required placeholder="First name" /> 
+                        <div class=" col-sm-4 messageContainer"></div> 
+            </div>
+
+            <div class="col-sm-4">
+                
+                    <input class="form-control" type="text" name="middlename"  placeholder="Middle name"  />  
+                      
+			</div>
+
+            <div class="col-sm-4">
+					<input class="form-control" type="text" name="lastname" placeholder="Last name"  />  
+                        
+            </div>
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			<div class="col-sm-12">
+			
+            <div class="col-sm-4">
+			<div class="form-group">
+                <label for="username"> Display name:</label> 
+                    <input class="form-control" type="text" name="username" id = "txt" onkeyup = "Validate(this)" placeholder="user name"  />  
+                       
+            </div>
+			</div>
+
+            <div class="col-sm-4">
+			
+            <div class="form-group">
+            <label for="phonenumber"> Phone Number: <span class="req">* </span></label>
+                    <input required type="text" name="phone"  class="form-control phone" maxlength="10" placeholder="Enter only numbers..."/> 
+					<div class=" col-sm-4 messageContainer"></div> 
+			</div>
+			</div>
+
+            <div class="col-sm-4">
+			<div class="form-group col-sm-8 ">
+            <label for="gender"> Gender: <span class="req">* </span></label>
+                    <select class="selectpicker" name="gender" required>
+					<option value="" selected disabled >Select gender....</option>
+                       <option value="Male">Male</option>
+                       <option value="Female">Female</option>
+                    </select>
+					<div class=" col-sm-4 messageContainer"></div> 
+					</div>
+			</div>
+			</div>
+          
+
+            <div class="form-group col-sm-12">
+                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a href="#" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+            </div>
+                      
+            </fieldset>
+       
+      </div>
+   </div>
+   </div>
+   
+   
+   <script type="text/javascript">
+  
+   $(document).ready(function() {
+    $('#loginForm').bootstrapValidator({
+        framework: 'bootstrap',
+        err: {
+            container: function($field, validator) {
+                return $field.parent().next('.messageContainer');
+            }
+        },
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and cannot be empty'
+                    },
+                    emailAddress: {
+                        message: 'The email address is not valid'
+                    }
+                }
+            },
+			pwd: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required and cannot be empty'
+                    },
+                     stringLength: {
+                        min: 4,
+                        message: 'The password should be more than 4'
+                    }
+                }
+            }
+        }
+    });
+	
+	$('#registerForm').bootstrapValidator({
+        framework: 'bootstrap',
+        err: {
+            container: function($field, validator) {
+                // Look at the markup
+                //  <div class="col-xs-4">
+                //      <field>
+                //  </div>
+                //  <div class="col-xs-5 messageContainer"></div>
+                return $field.parent().next('.messageContainer');
+            }
+        },
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+			regMemb: {
+                validators: {
+                    notEmpty: {
+                        message: 'Select membership type'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and cannot be empty'
+                    },
+                    emailAddress: {
+                        message: 'The email address is not valid'
+                    }
+                }
+            },
+			password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required and cannot be empty'
+                    },
+                     stringLength: {
+                        min: 4,
+                        message: 'The password should be more than 4'
+                    }
+                }
+            },
+			confirmPassword: {
+                validators: {
+					notEmpty: {
+                        message: 'The confirm password is required and cannot be empty'
+                    },
+                     stringLength: {
+                        min: 4,
+                        message: 'The password should be more than 4'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: 'The password and its confirm password are not the same'
+                    }
+                }
+            },
+			firstname: {
+				validators: {
+					notEmpty: {
+                        message: 'The first name is required and cannot be empty'
+                    }
+				}
+			},
+			phone: {
+            validators: {
+                notEmpty: {
+                    message: 'The phone number is required'
+                },
+                regexp: {
+                    regexp: /^\+?1?([()/\.\-\s]*[0-9]){10}\s*((ext|x)\s*[0-9]+)*$/,
+                    message: 'Maximum length is 10'
+                }
+            }
+            },
+			gender: {
+				validators: {
+					notEmpty: {
+                        message: 'The gender is required and cannot be empty'
+                    }
+				}
+			},
+			terms: {
+				validators: {
+					notEmpty: {
+                        message: 'Click the checkbox and accept our T&C'
+                    }
+				}
+			}
+        }
+    });
+});
+  
+
+</script>
+ </body>
+ </html>
